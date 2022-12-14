@@ -16,6 +16,11 @@ services:
     restart: always
     environment:
       - ME_CONFIG_MONGODB_SERVER=mongodb
+      - ME_CONFIG_BASICAUTH_USERNAME=user
+      - ME_CONFIG_BASICAUTH_PASSWORD=user
+      - ME_CONFIG_MONGODB_ENABLE_ADMIN=true
+      - ME_CONFIG_MONGODB_ADMINUSERNAME=root
+      - ME_CONFIG_MONGODB_ADMINPASSWORD=root
       - VCAP_APP_HOST=0.0.0.0
       - VCAP_APP_PORT=8081
     ports:
